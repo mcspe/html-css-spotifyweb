@@ -1,11 +1,11 @@
-.wrapper{
+section.wrapper{
   height: calc(100vh - 80px);
 }
 
 /* BARRA DI NAVIGAZIONE LATERALE */
   .wrapper .left-nav{
     width: 250px;
-    height: 100%;
+    height: calc(100vh - 80px);
     background: rgb(0, 0, 0);
   }
 
@@ -23,15 +23,27 @@
   }
 
   .wrapper .navigate{
+    height: calc(100vh - 150px);
     color: #696969;
   }
 
-  .wrapper .btn{
-    cursor: pointer;
-    padding: 10px;
+  .wrapper .music{
+    height: calc(100vh - 260px);
   }
 
-  .wrapper .btn:hover{
+  .wrapper .account{
+    height: 110px;
+  }
+
+  .wrapper .navigate .element{
+    padding: 10px 20px;
+  }
+
+  .wrapper .navigate .btn{
+    cursor: pointer;
+  }
+
+  .wrapper .navigate .btn:hover{
     color: white;
   }
 
@@ -41,7 +53,57 @@
   }
 
   .wrapper .navigate img{
-    height: 40px;
+    height: 25px;
+  }
+
+  .wrapper .navigate h6{
+    color: white;
+  }
+
+  .wrapper .navigate .add{
+    background: #696969;
+    color: black;
+    font-size: 2rem;
+    padding: 5px 15px;
+  }
+
+  .wrapper .navigate .add:hover{
+    color: white;
+  }
+
+  .wrapper .navigate .pl-list{
+    position: relative;
+    height: 100%;
+    overflow-y: hidden;
+  }
+
+  .wrapper .account .btn{
+    padding: 5px 0;
+    border-bottom: 1px solid #696969;
+  }
+
+  .wrapper .account .user{
+    padding: 10px 20px;
+  }
+
+  .wrapper .account .user-img{
+    position: relative;
+    width: 40px;
+    background: #696969;
+    border-radius: 50%;
+  }
+
+  .wrapper .account .user-img::after{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  .wrapper .account .user-img img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 /* /BARRA DI NAVIGAZIONE LATERALE */
 
@@ -49,7 +111,7 @@
 .wrapper .content{
   width: calc(100% - 250px);
   height: 100%;
-  overflow: auto;
+  overflow-y: auto;
 }
 
 .wrapper .top-bar{
@@ -57,7 +119,7 @@
   left: 250px;
   right: 0;
   top: 0;
-  z-index: 2;
+  z-index: 8;
   height: 70px;
   background: rgba(0, 0, 0, .5);
   
@@ -65,7 +127,7 @@
 
 section.control-panel{
   height: 80px;
-  z-index: 3;
+  z-index: 10;
 }
 
 
@@ -92,6 +154,19 @@ section.control-panel{
 
     .wrapper .logo .mobile{
       display: inline-block;
+    }
+
+    .wrapper .account{
+      justify-content: center;
+    }
+
+    .wrapper .account .btn{
+      text-align: center;
+    }
+
+    .wrapper .account .user{
+      padding: 5px 0;
+      justify-content: center;
     }
   /* BARRA DI NAVIGAZIONE LATERALE */
 
