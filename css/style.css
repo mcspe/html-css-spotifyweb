@@ -29,10 +29,13 @@ section.wrapper{
 
   .wrapper .music{
     height: calc(100vh - 260px);
+    z-index: 6;
+    overflow: auto;
   }
 
   .wrapper .account{
     height: 110px;
+    z-index: 9;
   }
 
   .wrapper .navigate .element{
@@ -72,9 +75,8 @@ section.wrapper{
   }
 
   .wrapper .navigate .pl-list{
-    position: relative;
-    height: 100%;
-    overflow-y: hidden;
+    height: calc(100vh - 505px);
+    overflow: auto;
   }
 
   .wrapper .account .btn{
@@ -240,6 +242,7 @@ section.wrapper{
 section.control-panel{
   height: 80px;
   z-index: 10;
+  background-color: #282828;
 }
 
 
@@ -248,21 +251,21 @@ section.control-panel{
 *******************************************/
 @media all and (max-width:1100px) {
   /* /SEZIONE CONTENUTI */
-    /* /SEZIONE BROWSE MUSICA */
+    /* /SEZIONE BROWSE MUSIC */
       .wrapper .browse-music .col{
         width: 25%;
       }
-    /* /SEZIONE BROWSE MUSICA */
+    /* /SEZIONE BROWSE MUSIC */
   /* /SEZIONE CONTENUTI */
 }
 
 @media all and (max-width:900px) {
   /* /SEZIONE CONTENUTI */
-    /* /SEZIONE BROWSE MUSICA */
+    /* /SEZIONE BROWSE MUSIC */
       .wrapper .browse-music .col{
         width: 50%;
       }
-    /* /SEZIONE BROWSE MUSICA */
+    /* /SEZIONE BROWSE MUSIC */
   /* /SEZIONE CONTENUTI */  
 }
 
