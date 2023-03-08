@@ -238,13 +238,99 @@ section.wrapper{
   /* /SEZIONE BROWSE MUSIC */
 /* /SEZIONE CONTENUTI */
 
+/* PLAYER INFERIORE */
+  section.control-panel{
+    height: 80px;
+    z-index: 10;
+    background-color: #282828;
+    padding: 10px;
+    color: #696969;
+  }
 
-section.control-panel{
-  height: 80px;
-  z-index: 10;
-  background-color: #282828;
-}
+  .control-panel span{
+    cursor: pointer;
+  }
 
+  .control-panel span:hover{
+    color: white;
+    text-decoration: underline;
+  }
+
+  .control-panel .bar{
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    background: #696969;
+  }
+
+  .control-panel .passed{
+    height: 100%;
+    width: 25%;
+    background: white;
+  }
+
+  /* SEZIONE BRANO IN RIPRODUZIONE */
+    .control-panel .track-img{
+      width: 50px;
+    }
+
+    .control-panel .title{
+      color: white;
+      font-size: .9rem;
+      font-weight: 800;
+    }
+
+    .control-panel .artist{
+      font-size: .8rem;
+    }
+  /* /SEZIONE BRANO IN RIPRODUZIONE */
+
+  /* SEZIONE SCORRIMENTO */
+    .control-panel .timing{
+      width: 50%;
+    }
+
+    .control-panel .time.bar:hover .passed{
+      background: #ADFF2F;
+    }
+
+    .control-panel .time.bar:hover::after{
+      content: '';
+      position: absolute;
+      left: 25%;
+      transform: translateX(-50%);
+      top: -6px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: white;
+    }
+  /* /SEZIONE SCORRIMENTO */
+
+  /* SEZIONE VOLUME */
+    .control-panel .vol{
+      width: 100px;
+    }
+
+    .control-panel .vol .bar:hover .passed{
+      background: #ADFF2F;
+    }
+
+    .control-panel .vol .bar:hover::after{
+      content: '';
+      position: absolute;
+      left: 25%;
+      transform: translateX(-50%);
+      top: -6px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: white;
+    }
+  /* /SEZIONE VOLUME */
+/* /PLAYER INFERIORE */
 
 /*******************************************
   SEZIONE MEDIA QUERY
@@ -270,15 +356,15 @@ section.control-panel{
 }
 
 @media all and (max-width:600px) {
+  .desktop{
+    display: none;
+  }
+
   /* BARRA DI NAVIGAZIONE LATERALE */
     .wrapper .left-nav{
       width: 60px;
     }
     
-    .wrapper .desktop{
-      display: none;
-    }
-
     .wrapper .logo .mobile{
       display: inline-block;
     }
