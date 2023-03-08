@@ -56,7 +56,7 @@ section.wrapper{
     height: 25px;
   }
 
-  .wrapper .navigate h6{
+  .wrapper .navigate h3{
     color: white;
   }
 
@@ -84,19 +84,16 @@ section.wrapper{
 
   .wrapper .account .user{
     padding: 10px 20px;
+    color: white;
+    font-weight: 800;
   }
 
   .wrapper .account .user-img{
     position: relative;
     width: 40px;
+    height: 40px;
     background: #696969;
     border-radius: 50%;
-  }
-
-  .wrapper .account .user-img::after{
-    content: "";
-    display: block;
-    padding-bottom: 100%;
   }
 
   .wrapper .account .user-img img{
@@ -108,22 +105,137 @@ section.wrapper{
 /* /BARRA DI NAVIGAZIONE LATERALE */
 
 
-.wrapper .content{
-  width: calc(100% - 250px);
-  height: 100%;
-  overflow-y: auto;
-}
+/* SEZIONE CONTENUTI */
+  .wrapper .content{
+    width: calc(100% - 250px);
+    height: 100%;
+    overflow-y: auto;
+    background: #141922;
+    padding: 90px 20px 20px;
+    color: white;
+  }
 
-.wrapper .top-bar{
-  position: fixed;
-  left: 250px;
-  right: 0;
-  top: 0;
-  z-index: 8;
-  height: 70px;
-  background: rgba(0, 0, 0, .5);
-  
-}
+  /* BARRA SUPERIORE FIXED */
+    .wrapper .top-bar{
+      position: fixed;
+      left: 250px;
+      right: 0;
+      top: 0;
+      z-index: 8;
+      height: 70px;
+      background: rgba(0, 0, 0, .5);
+    }
+
+    .wrapper .top-bar .btn{
+      cursor: pointer;
+      color: white;
+      padding: 10px 30px;
+      border: 2px solid white;
+      border-radius: 25px;
+      font-size: .8rem;
+    }
+
+    .wrapper .top-bar .btn:hover{
+      font-size: 1rem;
+    }
+  /* /BARRA SUPERIORE FIXED */
+
+  /* MENU SUPERIORE */
+    .wrapper nav ul{
+      flex-wrap: wrap;
+    }
+
+    .wrapper .content nav li{
+      cursor: pointer;
+      list-style: none;
+      text-transform: uppercase;
+      display: inline-block;
+      color: #696969;
+      margin: 0 10px 20px;
+    }
+
+    .wrapper .content nav li:hover{
+      color: white;
+    }
+
+    .wrapper .content nav .active{
+      position: relative;
+    }
+
+    .wrapper .content nav .active::after{
+      content: '';
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40%;
+      padding: 3px;
+      border-bottom: 2px solid #ADFF2F;
+    }
+  /* /MENU SUPERIORE */
+
+  /* SEZIONE BROWSE MUSIC */
+    .wrapper .browse-music .row{
+      flex-wrap: wrap;
+    }
+
+    .wrapper .browse-music .col{
+      width: calc(100% / 6);
+    }
+
+    .wrapper .browse-music .play-card{
+      cursor: pointer;
+    }
+
+    .wrapper .browse-music .play-img{
+      position: relative;
+      width: 100%;
+    }
+
+    .wrapper .browse-music .play-img::after{
+      content: "";
+      position: absolute;
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    .wrapper .browse-music .play-img .overlay{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, .3);
+      display: none;
+    }
+
+    .wrapper .browse-music .play-img .overlay i{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .wrapper .browse-music .play-card:hover .overlay{
+      display: block;
+    }
+
+    .wrapper .browse-music .play-info{
+      text-align: center;
+    }
+
+    .wrapper .browse-music h4{
+      color: #696969;
+      margin-top: 5px;
+    }
+
+    .wrapper .browse-music .popular .play-img{
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  /* /SEZIONE BROWSE MUSIC */
+/* /SEZIONE CONTENUTI */
+
 
 section.control-panel{
   height: 80px;
@@ -135,11 +247,23 @@ section.control-panel{
   SEZIONE MEDIA QUERY
 *******************************************/
 @media all and (max-width:1100px) {
-  
+  /* /SEZIONE CONTENUTI */
+    /* /SEZIONE BROWSE MUSICA */
+      .wrapper .browse-music .col{
+        width: 25%;
+      }
+    /* /SEZIONE BROWSE MUSICA */
+  /* /SEZIONE CONTENUTI */
 }
 
 @media all and (max-width:900px) {
-  
+  /* /SEZIONE CONTENUTI */
+    /* /SEZIONE BROWSE MUSICA */
+      .wrapper .browse-music .col{
+        width: 50%;
+      }
+    /* /SEZIONE BROWSE MUSICA */
+  /* /SEZIONE CONTENUTI */  
 }
 
 @media all and (max-width:600px) {
@@ -170,11 +294,15 @@ section.control-panel{
     }
   /* BARRA DI NAVIGAZIONE LATERALE */
 
-  .wrapper .content{
-    width: calc(100% - 60px);
-  }
+  /* SEZIONE CONTENUTI */
+    .wrapper .content{
+      width: calc(100% - 60px);
+    }
 
-  .wrapper .top-bar{
-    left: 60px;
-  }
+    /* BARRA SUPERIORE FIXED */
+      .wrapper .top-bar{
+        left: 60px;
+      }
+    /* /BARRA SUPERIORE FIXED */
+  /* /SEZIONE CONTENUTI */
 }
