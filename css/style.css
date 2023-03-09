@@ -199,19 +199,19 @@ section.wrapper{
       width: 100%;
     }
 
-    .wrapper .browse-music .play-img::after{
+    /* .wrapper .browse-music .play-img::after{
       content: "";
       position: absolute;
       display: block;
       padding-bottom: 100%;
-    }
+    } */
 
     .wrapper .browse-music .play-img .overlay{
       position: absolute;
       left: 0;
       right: 0;
       top: 0;
-      bottom: 0;
+      bottom: 4px;
       background-color: rgba(0, 0, 0, .3);
       display: none;
     }
