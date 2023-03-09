@@ -1,11 +1,11 @@
 section.wrapper{
-  height: calc(100vh - 100px);
+  height: calc(100vh - 90px);
 }
 
 /* BARRA DI NAVIGAZIONE LATERALE */
   .wrapper .left-nav{
     width: 250px;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 90px);
     background: rgb(0, 0, 0);
   }
 
@@ -23,12 +23,12 @@ section.wrapper{
   }
 
   .wrapper .navigate{
-    height: calc(100vh - 170px);
+    height: calc(100vh - 160px);
     color: #696969;
   }
 
   .wrapper .music{
-    height: calc(100vh - 290px);
+    height: calc(100vh - 280px);
     z-index: 6;
     overflow: auto;
   }
@@ -75,8 +75,12 @@ section.wrapper{
   }
 
   .wrapper .navigate .pl-list{
-    height: calc(100vh - 535px);
+    height: calc(100vh - 525px);
     overflow: auto;
+  }
+
+  .wrapper .navigate .pl-list li{
+    list-style: none;
   }
 
   .wrapper .account .btn{
@@ -240,7 +244,7 @@ section.wrapper{
 
 /* PLAYER INFERIORE */
   section.control-panel{
-    height: 100px;
+    height: 90px;
     z-index: 10;
     background-color: #282828;
     padding: 10px 20px;
