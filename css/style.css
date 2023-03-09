@@ -134,6 +134,7 @@ section.wrapper{
 
     .wrapper .top-bar .btn{
       cursor: pointer;
+      text-decoration: none;
       color: white;
       padding: 10px 30px;
       border: 2px solid white;
@@ -293,7 +294,12 @@ section.wrapper{
 
   /* SEZIONE SCORRIMENTO */
     .control-panel .timing{
-      width: 50%;
+      width: 40%;
+    }
+
+    .control-panel .timing strong{
+      color: white;
+      font-size: .8rem;
     }
 
     .control-panel .time.bar:hover .passed{
@@ -398,4 +404,12 @@ section.wrapper{
       }
     /* /BARRA SUPERIORE FIXED */
   /* /SEZIONE CONTENUTI */
+
+  /* PLAYER INFERIORE */
+    /* SEZIONE SCORRIMENTO */
+      .control-panel .timing-controls{
+        margin-bottom: 0;
+      }
+    /* /SEZIONE SCORRIMENTO */
+  /* /PLAYER INFERIORE */
 }
